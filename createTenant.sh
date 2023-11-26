@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Comando para executar o script
-#./createTenant.sh "V0__TESTE_TENANT" "curvas" "0" "https://curvas.us.auth0.com/" "https://curvas.us.auth0.com/.well-known/jwks.json" "https://curvas-api"
+#./createTenant.sh "NAME_MIGRATION" "SCHEMA_NAME" "VERSION_MIGRATION" "ISSUER_TENANT" "JWKS_URL" "AUDIENCE"
 
 NAME_MIGRATION=$1
 SCHEMA_NAME=$2
