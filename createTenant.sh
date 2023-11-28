@@ -48,7 +48,7 @@ else
     exit 1
 fi
 
-if awk -v SCHEMA_NAME="$SCHEMA_NAME" -v ISSUER_TENANT="$ISSUER_TENANT" -v JWKS_URL="$JWKS_URL" -v AUDIENCE="$AUDIENCE" '{gsub(/\${SCHEMA_NAME}/, SCHEMA_NAME); gsub(/\${ISSUER_TENANT}/, ISSUER_TENANT); gsub(/\${JWKS_URL}/, JWKS_URL); gsub(/\${AUDIENCE}/, AUDIENCE); print}' src/main/resources/db/migration/${NAME_MIGRATION}.sql > temp.sql
+if awk -v SCHEMA_NAME="$SCHEMA_NAME" -v ISSUER_TENANT="$ISSUER_TENANT" -v JWKS_URL="$JWKS_URL" -v AUDIENCE="$AUDIENCE" '{gsub(/\${SCHEMA_NAME}/, SCHEMA_NAME); gsub(/\${ISSUER_TENANT}/, ISSUER_TENANT); gsub(/\${JWKS_URL}/, JWKS_URL); gsub(/\${AUDIENCE}/, AUDIENCE); print}' Caminho_Do_Arquivo_Final/${NAME_MIGRATION}.sql > temp.sql
 then
     echo "Assigning values passed to migrations"
 else
