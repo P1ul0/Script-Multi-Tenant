@@ -40,7 +40,7 @@ if [ -z "$AUDIENCE" ]; then
     exit 1
 fi
 
-if cp src/main/resources/db/migration/V__.sql src/main/resources/db/migration/${NAME_MIGRATION}.sql;
+if cp Caminho_Para_Arquivo_Que_Deseja_Copiar/V__.sql Caminho_Do_Arquivo_Final/${NAME_MIGRATION}.sql;
 then
     echo "Migration created"
 else
@@ -56,7 +56,7 @@ else
     exit 1
 fi
 
-if mv temp.sql src/main/resources/db/migration/${NAME_MIGRATION}.sql
+if mv temp.sql Caminho_Do_Arquivo_Final/${NAME_MIGRATION}.sql
 then
     echo "Migration updated"
 else
